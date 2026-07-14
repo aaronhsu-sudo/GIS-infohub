@@ -22,7 +22,7 @@ try {
                     'on-secondary-fixed': '#00201e'
                 },
                 borderRadius: { DEFAULT: '0.25rem', lg: '0.5rem', xl: '0.75rem', full: '9999px' },
-                spacing: { base: '8px', xs: '4px', sm: '12px', md: '24px', 'container-max': '1280px', lg: '48px', xl: '80px', gutter: '24px' },
+                spacing: { base: '8px', xs: '4px', sm: '12px', md: '24px', lg: '48px', xl: '80px', gutter: '24px' },
                 fontFamily: {
                     'headline-lg': ['Plus Jakarta Sans'], caption: ['Noto Sans'], 'body-md': ['Noto Sans'],
                     'headline-md': ['Plus Jakarta Sans'], 'display-lg': ['Plus Jakarta Sans'],

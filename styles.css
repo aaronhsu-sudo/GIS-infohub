@@ -1,11 +1,26 @@
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
+/* ===== 常用版面設定：主要修改這裡即可 ===== */
+:root {
+    --site-max-width: 1400px;
+    --card-ratio: 1.08 / 1;
+    --pulse-speed-slow: 8s;
+    --pulse-speed-medium: 10s;
+    --bounce-speed: 12s;
+    --chat-gradient: linear-gradient(135deg, #004cca 0%, #0062ff 50%, #4edad3 100%);
+}
+
+/* ===== 共用版面 ===== */
+.site-container {
+    width: 100%;
+    max-width: var(--site-max-width);
+    margin-inline: auto;
 }
 
 .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
 
 @keyframes pulse-soft {
     0%, 100% { opacity: 0.15; transform: scale(1); }
@@ -16,9 +31,9 @@
     animation: pulse-soft linear infinite;
 }
 
-.blob-pulse-8 { animation-duration: 8s; }
-.blob-bounce-12 { animation-duration: 12s; }
-.blob-pulse-10 { animation-duration: 10s; }
+.blob-pulse-8 { animation-duration: var(--pulse-speed-slow); }
+.blob-pulse-10 { animation-duration: var(--pulse-speed-medium); }
+.blob-bounce-12 { animation-duration: var(--bounce-speed); }
 
 .footer-wave {
     background: linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.4) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
@@ -26,9 +41,15 @@
 }
 
 .chat-btn-gradient {
-    background: linear-gradient(135deg, #004cca 0%, #0062ff 50%, #4edad3 100%);
+    background: var(--chat-gradient);
 }
 
 .material-symbol-filled {
     font-variation-settings: 'FILL' 1;
+}
+
+@media (min-width: 1024px) {
+    .card-hover-effect {
+        aspect-ratio: var(--card-ratio);
+    }
 }
