@@ -1,61 +1,219 @@
 <!DOCTYPE html>
 
-<html class="light" lang="zh-TW"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script src="tailwind.config.js"></script>
-<link href="styles.css" rel="stylesheet"/>
+<html class="light" lang="zh-TW">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind.config.js"></script>
+    <link href="styles.css" rel="stylesheet" />
 </head>
+
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden min-h-screen flex flex-col relative">
-<!-- Background Enhancement: Diverse Colorful Blobs -->
-<div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
-<div class="blob-pulse-8 absolute top-[-5%] left-[-5%] w-[45vw] h-[45vw] rounded-full bg-primary/10 blur-[100px] animate-pulse"></div>
-<div class="blob-bounce-12 absolute top-[10%] right-[5%] w-[35vw] h-[35vw] rounded-full bg-secondary-container/20 blur-[120px] animate-bounce"></div>
-<div class="blob-pulse-10 absolute bottom-[10%] left-[10%] w-[40vw] h-[40vw] rounded-full bg-tertiary-fixed/15 blur-[90px] animate-pulse"></div>
-<div class="absolute bottom-[-10%] right-[-5%] w-[50vw] h-[50vw] rounded-full bg-error-container/10 blur-[110px]"></div>
-<div class="absolute top-[40%] left-[30%] w-[25vw] h-[25vw] rounded-full bg-primary-fixed-dim/20 blur-[80px]"></div>
-<div class="absolute top-[60%] right-[20%] w-[30vw] h-[30vw] rounded-full bg-secondary-fixed/10 blur-[100px]"></div>
-</div>
-<!-- Floating TopAppBar -->
-<div class="fixed top-6 left-0 right-0 z-50 px-md md:px-lg">
-<header class="bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] rounded-2xl max-w-container-max mx-auto h-16 md:h-20 transition-all duration-300">
-<div class="flex justify-between items-center w-full px-md md:px-lg h-full">
-<div class="flex items-center gap-base">
-<span class="material-symbols-outlined material-symbol-filled text-primary text-3xl">hub</span>
-<h1 class="font-headline-md text-headline-md font-bold text-primary hidden lg:block">GIS Group</h1>
-</div>
-<nav class="flex items-center gap-sm md:gap-lg overflow-x-auto no-scrollbar">
-<a class="text-on-surface font-label-md text-label-md hover:text-primary transition-all whitespace-nowrap px-2 py-1 rounded-lg hover:bg-primary/5" href="#">行政</a>
-<a class="text-on-surface font-label-md text-label-md hover:text-primary transition-all whitespace-nowrap px-2 py-1 rounded-lg hover:bg-primary/5" href="#">總務</a>
-<a class="text-on-surface font-label-md text-label-md hover:text-primary transition-all whitespace-nowrap px-2 py-1 rounded-lg hover:bg-primary/5" href="#">資訊</a>
-<a class="text-on-surface font-label-md text-label-md hover:text-primary transition-all whitespace-nowrap px-2 py-1 rounded-lg hover:bg-primary/5" href="#">財務</a>
-<a class="text-on-surface font-label-md text-label-md hover:text-primary transition-all whitespace-nowrap px-2 py-1 rounded-lg hover:bg-primary/5" href="#">福委會</a>
-<a class="bg-primary text-white font-label-md text-label-md px-4 py-2 rounded-full hover:shadow-lg hover:scale-105 transition-all whitespace-nowrap" href="#">集團GROUP</a>
-</nav>
-</div>
-</header>
-</div>
-<main class="flex-grow pt-24"><section class="py-xl"><div class="max-w-container-max mx-auto px-md md:px-lg"><div class="flex flex-col md:flex-row md:items-end justify-between mb-xl gap-md"><div><h3 class="font-headline-lg text-headline-lg text-on-surface mb-xs tracking-tight">集團功能入口網</h3><p class="text-on-surface-variant font-body-md">快速存取各項核心服務與辦公資源</p></div><div class="flex gap-sm"><button class="p-2 border border-outline/20 bg-white/50 backdrop-blur-sm rounded-xl hover:bg-white transition-colors shadow-sm"><span class="material-symbols-outlined">grid_view</span></button><button class="p-2 border border-outline/20 bg-white/50 backdrop-blur-sm rounded-xl hover:bg-white transition-colors shadow-sm"><span class="material-symbols-outlined">format_list_bulleted</span></button></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter"><div class="card-hover-effect bg-white rounded-2xl p-md flex flex-col h-full shadow-sm border border-outline/10 group hover:bg-primary transition-all duration-300"><div class="w-16 h-16 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center mb-md group-hover:bg-white/20 group-hover:text-white transition-all duration-300"><span class="material-symbols-outlined material-symbol-filled text-4xl">verified_user</span></div><h4 class="font-headline-md text-headline-md text-on-surface mb-sm group-hover:text-white transition-colors">行政 (Administration)</h4><p class="text-on-surface-variant font-body-md mb-lg flex-grow leading-relaxed group-hover:text-white/90 transition-colors">管理日常公文發布、簽核流程以及組織架構維護。確保中心運作之標準化與合規性。</p><a class="flex items-center gap-xs text-primary font-label-md hover:gap-sm transition-all group-hover:text-white" href="#">前往行政系統 <span class="material-symbols-outlined text-sm">arrow_forward</span></a></div><div class="card-hover-effect bg-white rounded-2xl p-md flex flex-col h-full shadow-sm border border-outline/10 group hover:bg-primary transition-all duration-300"><div class="w-16 h-16 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center mb-md group-hover:bg-white/20 group-hover:text-white transition-all duration-300"><span class="material-symbols-outlined material-symbol-filled text-4xl">inventory_2</span></div><h4 class="font-headline-md text-headline-md text-on-surface mb-sm group-hover:text-white transition-colors">總務 (General Affairs)</h4><p class="text-on-surface-variant font-body-md mb-lg flex-grow leading-relaxed group-hover:text-white/90 transition-colors">資產設備登記、場地預約管理與環境庶務申請。提供完善的硬體支援與工作環境。</p><a class="flex items-center gap-xs text-secondary font-label-md hover:gap-sm transition-all group-hover:text-white" href="#">前往總務系統 <span class="material-symbols-outlined text-sm">arrow_forward</span></a></div><div class="card-hover-effect bg-white rounded-2xl p-md flex flex-col h-full shadow-sm border border-outline/10 group hover:bg-primary transition-all duration-300"><div class="w-16 h-16 rounded-2xl bg-tertiary-fixed text-tertiary flex items-center justify-center mb-md group-hover:bg-white/20 group-hover:text-white transition-all duration-300"><span class="material-symbols-outlined material-symbol-filled text-4xl">terminal</span></div><h4 class="font-headline-md text-headline-md text-on-surface mb-sm group-hover:text-white transition-colors">資訊 (IT)</h4><p class="text-on-surface-variant font-body-md mb-lg flex-grow leading-relaxed group-hover:text-white/90 transition-colors">帳號密碼維護、網路報修服務與雲端資源申請。保障資訊安全與穩定連結。</p><a class="flex items-center gap-xs text-tertiary font-label-md hover:gap-sm transition-all group-hover:text-white" href="#">前往資訊報修 <span class="material-symbols-outlined text-sm">arrow_forward</span></a></div><div class="card-hover-effect bg-white rounded-2xl p-md flex flex-col h-full shadow-sm border border-outline/10 group hover:bg-primary transition-all duration-300"><div class="w-16 h-16 rounded-2xl bg-error-container text-error flex items-center justify-center mb-md group-hover:bg-white/20 group-hover:text-white transition-all duration-300"><span class="material-symbols-outlined material-symbol-filled text-4xl">payments</span></div><h4 class="font-headline-md text-headline-md text-on-surface mb-sm group-hover:text-white transition-colors">財務 (Finance)</h4><p class="text-on-surface-variant font-body-md mb-lg flex-grow leading-relaxed group-hover:text-white/90 transition-colors">差旅費報支、專案經費查詢與電子發票上傳。協助各部門精準掌控預算執行進度。</p><a class="flex items-center gap-xs text-error font-label-md hover:gap-sm transition-all group-hover:text-white" href="#">前往財務系統 <span class="material-symbols-outlined text-sm">arrow_forward</span></a></div><div class="card-hover-effect bg-white rounded-2xl p-md flex flex-col h-full shadow-sm border border-outline/10 group hover:bg-primary transition-all duration-300"><div class="w-16 h-16 rounded-2xl bg-primary-fixed-dim text-on-primary-fixed-variant flex items-center justify-center mb-md group-hover:bg-white/20 group-hover:text-white transition-all duration-300"><span class="material-symbols-outlined material-symbol-filled text-4xl">volunteer_activism</span></div><h4 class="font-headline-md text-headline-md text-on-surface mb-sm group-hover:text-white transition-colors">福委會 (Welfare)</h4><p class="text-on-surface-variant font-body-md mb-lg flex-grow leading-relaxed group-hover:text-white/90 transition-colors">員工福利活動、社團補助申請與節慶禮物資訊。打造幸福職場，促進團隊凝聚力。</p><a class="flex items-center gap-xs text-primary font-label-md hover:gap-sm transition-all group-hover:text-white" href="#">查看最新福利 <span class="material-symbols-outlined text-sm">arrow_forward</span></a></div><div class="card-hover-effect bg-white rounded-2xl p-md flex flex-col h-full shadow-sm border border-outline/10 group hover:bg-primary transition-all duration-300 relative overflow-hidden"><div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-20 group-hover:scale-125 transition-all duration-700"><span class="material-symbols-outlined text-9xl text-primary group-hover:text-white">language</span></div><div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-md group-hover:bg-white/20 group-hover:text-white transition-all duration-300"><span class="material-symbols-outlined material-symbol-filled text-4xl">corporate_fare</span></div><h4 class="font-headline-md text-headline-md text-on-surface mb-sm group-hover:text-white transition-colors">集團GROUP (Group)</h4><p class="text-on-surface-variant font-body-md mb-lg flex-grow leading-relaxed group-hover:text-white/90 transition-colors">跨中心資源整合、大型標案合作與國際學術交流。連結全球視野，創造集團綜效。</p><a class="flex items-center gap-xs text-primary font-label-md group/link hover:gap-sm transition-all group-hover:text-white" href="#">集團資源專區 <span class="material-symbols-outlined text-sm">arrow_forward</span></a></div></div></div></section></main>
-<!-- Redesigned Footer -->
-<footer class="relative overflow-hidden bg-white/20 backdrop-blur-xl border-t border-white/40 mt-lg"><div class="max-w-container-max mx-auto px-md md:px-lg py-lg relative z-10"><div class="flex flex-col items-center gap-md"><div class="flex flex-col items-center gap-xs"><div class="font-headline-md text-headline-md font-bold text-primary">逢甲GIS集團</div></div><div class="mt-md text-center"><p class="font-caption text-caption text-on-surface-variant/80">© 2024 Feng Chia GIS Group. Building the Future with Geospatial Intelligence.</p><p class="font-caption text-caption text-on-surface-variant/60 mt-xs">All Rights Reserved.</p></div></div></div><div class="h-2 w-full bg-gradient-to-r from-primary via-secondary to-tertiary opacity-30"></div></footer>
-<!-- AI Floating Button -->
-<button class="fixed bottom-8 right-8 z-[60] group">
-<div class="relative flex items-center justify-center w-24 h-24 md:w-28 md:h-28 rounded-full transition-all duration-500 group-hover:scale-110 group-active:scale-95 group-hover:shadow-[0_12px_40px_rgba(127,75,0,0.6)] bg-gradient-to-r from-primary to-secondary-container shadow-[0_0_20px_rgba(0,98,255,0.4)]">
-<!-- Pulse ring effect -->
-<div class="absolute inset-0 rounded-full animate-ping opacity-20 group-hover:opacity-40 bg-primary"></div>
-<!-- Icon/Content -->
-<div class="relative flex flex-col items-center">
-<span class="material-symbols-outlined material-symbol-filled text-white text-3xl md:text-4xl">smart_toy</span>
-<span class="text-[10px] md:text-xs text-white font-bold tracking-widest mt-0.5">AI HELPER</span>
-</div>
-</div>
-<!-- Tooltip -->
-<span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 px-4 py-2 bg-inverse-surface text-inverse-on-surface text-label-md rounded-xl opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all pointer-events-none whitespace-nowrap shadow-xl border border-white/10">
-        需要幫助嗎？問問 AI 助理
-    </span>
-</button>
-<script src="script.js"></script>
-</body></html>
+    <!-- Background Enhancement: Diverse Colorful Blobs -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div
+            class="blob-pulse-8 absolute top-[-5%] left-[-5%] w-[45vw] h-[45vw] rounded-full bg-primary/10 blur-[100px] animate-pulse">
+        </div>
+        <div
+            class="blob-bounce-12 absolute top-[10%] right-[5%] w-[35vw] h-[35vw] rounded-full bg-secondary-container/20 blur-[120px] animate-bounce">
+        </div>
+        <div
+            class="blob-pulse-10 absolute bottom-[10%] left-[10%] w-[40vw] h-[40vw] rounded-full bg-tertiary-fixed/15 blur-[90px] animate-pulse">
+        </div>
+        <div
+            class="absolute bottom-[-10%] right-[-5%] w-[50vw] h-[50vw] rounded-full bg-error-container/10 blur-[110px]">
+        </div>
+        <div class="absolute top-[40%] left-[30%] w-[25vw] h-[25vw] rounded-full bg-primary-fixed-dim/20 blur-[80px]">
+        </div>
+        <div class="absolute top-[60%] right-[20%] w-[30vw] h-[30vw] rounded-full bg-secondary-fixed/10 blur-[100px]">
+        </div>
+    </div>
+    <!-- Floating TopAppBar -->
+    <div class="fixed top-6 left-0 right-0 z-50 px-md md:px-lg">
+        <header
+            class="bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] rounded-2xl max-w-container-max mx-auto h-16 md:h-20 transition-all duration-300">
+            <div class="flex justify-between items-center w-full px-md md:px-lg h-full">
+                <div class="flex items-center gap-base">
+                    <span class="material-symbols-outlined material-symbol-filled text-primary text-3xl">hub</span>
+                    <h1 class="font-headline-md text-headline-md font-bold text-primary hidden lg:block">逢甲GIS集團資訊整合平台</h1>
+                </div>
+                <nav class="flex items-center gap-sm md:gap-lg overflow-x-auto no-scrollbar">
+                    <a class="text-on-surface font-label-md text-label-md hover:text-primary transition-all whitespace-nowrap px-2 py-1 rounded-lg hover:bg-primary/5"
+                        href="#">行政</a>
+                    <a class="text-on-surface font-label-md text-label-md hover:text-primary transition-all whitespace-nowrap px-2 py-1 rounded-lg hover:bg-primary/5"
+                        href="#">總務</a>
+                    <a class="text-on-surface font-label-md text-label-md hover:text-primary transition-all whitespace-nowrap px-2 py-1 rounded-lg hover:bg-primary/5"
+                        href="#">資訊</a>
+                    <a class="text-on-surface font-label-md text-label-md hover:text-primary transition-all whitespace-nowrap px-2 py-1 rounded-lg hover:bg-primary/5"
+                        href="#">財務</a>
+                    <a class="text-on-surface font-label-md text-label-md hover:text-primary transition-all whitespace-nowrap px-2 py-1 rounded-lg hover:bg-primary/5"
+                        href="#">福委會</a>
+                    <a class="text-on-surface font-label-md text-label-md hover:text-primary transition-all whitespace-nowrap px-2 py-1 rounded-lg hover:bg-primary/5"
+                        href="#">集團GROUP</a>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <main class="flex-grow pt-24">
+        <section class="py-xl">
+            <div class="max-w-container-max mx-auto px-md md:px-lg">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-xl gap-md">
+                    <div>
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface mb-xs tracking-tight">集團資料入口網</h3>
+                        <p class="text-on-surface-variant font-body-md">快速查找各項核心服務與辦公資料</p>
+                    </div>
+                    <div class="flex gap-sm"><button
+                            class="p-2 border border-outline/20 bg-white/50 backdrop-blur-sm rounded-xl hover:bg-white transition-colors shadow-sm"><span
+                                class="material-symbols-outlined">grid_view</span></button><button
+                            class="p-2 border border-outline/20 bg-white/50 backdrop-blur-sm rounded-xl hover:bg-white transition-colors shadow-sm"><span
+                                class="material-symbols-outlined">format_list_bulleted</span></button></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                    <div
+                        class="card-hover-effect bg-white rounded-2xl p-md flex flex-col h-full shadow-sm border border-outline/10 group hover:bg-primary transition-all duration-300">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center mb-md group-hover:bg-white/20 group-hover:text-white transition-all duration-300">
+                            <span class="material-symbols-outlined material-symbol-filled text-4xl">verified_user</span>
+                        </div>
+                        <h4
+                            class="font-headline-md text-headline-md text-on-surface mb-sm group-hover:text-white transition-colors">
+                            行政</h4>
+                        <p
+                            class="text-on-surface-variant font-body-md mb-lg flex-grow leading-relaxed group-hover:text-white/90 transition-colors">
+                            整合辦公空間、設備資源與總務服務，讓日常工作更便利、更有效率。</p><a
+                            class="flex items-center gap-xs text-primary font-label-md hover:gap-sm transition-all group-hover:text-white"
+                            href="#">前往行政說明頁面 <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                    </div>
+                    <div
+                        class="card-hover-effect bg-white rounded-2xl p-md flex flex-col h-full shadow-sm border border-outline/10 group hover:bg-primary transition-all duration-300">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center mb-md group-hover:bg-white/20 group-hover:text-white transition-all duration-300">
+                            <span class="material-symbols-outlined material-symbol-filled text-4xl">inventory_2</span>
+                        </div>
+                        <h4
+                            class="font-headline-md text-headline-md text-on-surface mb-sm group-hover:text-white transition-colors">
+                            總務</h4>
+                        <p
+                            class="text-on-surface-variant font-body-md mb-lg flex-grow leading-relaxed group-hover:text-white/90 transition-colors">
+                            整合辦公空間、設備資源與總務服務，讓日常工作更便利、更有效率。</p><a
+                            class="flex items-center gap-xs text-secondary font-label-md hover:gap-sm transition-all group-hover:text-white"
+                            href="#">前往總務說明頁面 <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                    </div>
+                    <div
+                        class="card-hover-effect bg-white rounded-2xl p-md flex flex-col h-full shadow-sm border border-outline/10 group hover:bg-primary transition-all duration-300">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-tertiary-fixed text-tertiary flex items-center justify-center mb-md group-hover:bg-white/20 group-hover:text-white transition-all duration-300">
+                            <span class="material-symbols-outlined material-symbol-filled text-4xl">terminal</span>
+                        </div>
+                        <h4
+                            class="font-headline-md text-headline-md text-on-surface mb-sm group-hover:text-white transition-colors">
+                            資訊</h4>
+                        <p
+                            class="text-on-surface-variant font-body-md mb-lg flex-grow leading-relaxed group-hover:text-white/90 transition-colors">
+                            數位工具與系統服務入口，提供系統使用說明、帳號申請、設備支援及資訊安全相關資訊。</p><a
+                            class="flex items-center gap-xs text-tertiary font-label-md hover:gap-sm transition-all group-hover:text-white"
+                            href="#">前往資訊說明頁面 <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                    </div>
+                    <div
+                        class="card-hover-effect bg-white rounded-2xl p-md flex flex-col h-full shadow-sm border border-outline/10 group hover:bg-primary transition-all duration-300">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-error-container text-error flex items-center justify-center mb-md group-hover:bg-white/20 group-hover:text-white transition-all duration-300">
+                            <span class="material-symbols-outlined material-symbol-filled text-4xl">payments</span>
+                        </div>
+                        <h4
+                            class="font-headline-md text-headline-md text-on-surface mb-sm group-hover:text-white transition-colors">
+                            財務</h4>
+                        <p
+                            class="text-on-surface-variant font-body-md mb-lg flex-grow leading-relaxed group-hover:text-white/90 transition-colors">
+                            與費用、請款及報支相關的大小事，快速查找財務流程、作業規範與常用表單。</p><a
+                            class="flex items-center gap-xs text-error font-label-md hover:gap-sm transition-all group-hover:text-white"
+                            href="#">前往財務說明頁面 <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                    </div>
+                    <div
+                        class="card-hover-effect bg-white rounded-2xl p-md flex flex-col h-full shadow-sm border border-outline/10 group hover:bg-primary transition-all duration-300">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-primary-fixed-dim text-on-primary-fixed-variant flex items-center justify-center mb-md group-hover:bg-white/20 group-hover:text-white transition-all duration-300">
+                            <span
+                                class="material-symbols-outlined material-symbol-filled text-4xl">volunteer_activism</span>
+                        </div>
+                        <h4
+                            class="font-headline-md text-headline-md text-on-surface mb-sm group-hover:text-white transition-colors">
+                            福委會 (Welfare)</h4>
+                        <p
+                            class="text-on-surface-variant font-body-md mb-lg flex-grow leading-relaxed group-hover:text-white/90 transition-colors">
+                            掌握最新員工活動與福利資訊！包含社團活動、員工旅遊、節慶活動及各項福利措施。</p><a
+                            class="flex items-center gap-xs text-primary font-label-md hover:gap-sm transition-all group-hover:text-white"
+                            href="#">查看福利 <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                    </div>
+                    <div
+                        class="card-hover-effect bg-white rounded-2xl p-md flex flex-col h-full shadow-sm border border-outline/10 group hover:bg-primary transition-all duration-300 relative overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-20 group-hover:scale-125 transition-all duration-700">
+                            <span
+                                class="material-symbols-outlined text-9xl text-primary group-hover:text-white">language</span>
+                        </div>
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-md group-hover:bg-white/20 group-hover:text-white transition-all duration-300">
+                            <span
+                                class="material-symbols-outlined material-symbol-filled text-4xl">corporate_fare</span>
+                        </div>
+                        <h4
+                            class="font-headline-md text-headline-md text-on-surface mb-sm group-hover:text-white transition-colors">
+                            集團Group</h4>
+                        <p
+                            class="text-on-surface-variant font-body-md mb-lg flex-grow leading-relaxed group-hover:text-white/90 transition-colors">
+                            集團共同事務都在這裡！整合跨部門公共職能團隊資訊、集團專案、公共資源及重要公告。</p><a
+                            class="flex items-center gap-xs text-primary font-label-md group/link hover:gap-sm transition-all group-hover:text-white"
+                            href="#">查看集團Group介紹 <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Redesigned Footer -->
+    <footer class="relative overflow-hidden bg-white/20 backdrop-blur-xl border-t border-white/40 mt-lg">
+        <div class="max-w-container-max mx-auto px-md md:px-lg py-lg relative z-10">
+            <div class="flex flex-col items-center gap-md">
+                <div class="flex flex-col items-center gap-xs">
+                    <div class="font-headline-md text-headline-md font-bold text-primary">逢甲GIS集團</div>
+                </div>
+                <div class="mt-md text-center">
+<!--                     <p class="font-caption text-caption text-on-surface-variant/80">© 2024 Feng Chia GIS Group. Building
+                        the Future with Geospatial Intelligence.</p> -->
+                    <p class="font-caption text-caption text-on-surface-variant/60 mt-xs">All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="h-2 w-full bg-gradient-to-r from-primary via-secondary to-tertiary opacity-30"></div>
+    </footer>
+    <!-- AI Floating Button -->
+    <button class="fixed bottom-8 right-8 z-[60] group">
+        <div
+            class="relative flex items-center justify-center w-24 h-24 md:w-28 md:h-28 rounded-full transition-all duration-500 group-hover:scale-110 group-active:scale-95 group-hover:shadow-[0_12px_40px_rgba(127,75,0,0.6)] bg-gradient-to-r from-primary to-secondary-container shadow-[0_0_20px_rgba(0,98,255,0.4)]">
+            <!-- Pulse ring effect -->
+            <div class="absolute inset-0 rounded-full animate-ping opacity-20 group-hover:opacity-40 bg-primary"></div>
+            <!-- Icon/Content -->
+            <div class="relative flex flex-col items-center">
+                <span
+                    class="material-symbols-outlined material-symbol-filled text-white text-3xl md:text-4xl">smart_toy</span>
+                <span class="text-[10px] md:text-xs text-white font-bold tracking-widest mt-0.5">AI小幫手</span>
+            </div>
+        </div>
+        <!-- Tooltip -->
+        <span
+            class="absolute right-full mr-4 top-1/2 -translate-y-1/2 px-4 py-2 bg-inverse-surface text-inverse-on-surface text-label-md rounded-xl opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all pointer-events-none whitespace-nowrap shadow-xl border border-white/10">
+            需要幫助嗎？問問小布的 AI 助理
+        </span>
+    </button>
+    <script src="script.js"></script>
+</body>
+
+</html>
