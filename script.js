@@ -1,4 +1,4 @@
-document.querySelectorAll('.card-hover-effect').forEach((card) => {
+document.querySelectorAll('.portal-card').forEach((card) => {
     card.addEventListener('mousemove', (event) => {
         const rect = card.getBoundingClientRect();
         const x = event.clientX - rect.left;
@@ -14,4 +14,9 @@ document.querySelectorAll('.card-hover-effect').forEach((card) => {
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
     });
+});
+
+document.querySelectorAll('.content-link').forEach((link) => {
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
 });
