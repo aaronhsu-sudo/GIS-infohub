@@ -1,6 +1,7 @@
 /* ===== Design tokens：全站常用設定 ===== */
 :root {
     --primary-color: #004cca;
+    --primary-hover: #003b9e;
     --primary-container: #0062ff;
     --primary-light: #dbe1ff;
     --secondary-color: #006a66;
@@ -490,9 +491,410 @@ button {
     line-height: 1.75;
 }
 
+.finance-form-guide {
+    margin-top: 32px;
+}
+
+.finance-form-guide-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: var(--spacing-medium);
+    margin-bottom: 20px;
+}
+
+.finance-form-guide-title {
+    margin: 0;
+    padding-left: var(--spacing-medium);
+    border-left: 4px solid var(--primary-color);
+    font-size: var(--font-size-title);
+    line-height: 1.3;
+}
+
+.finance-form-guide-button {
+    display: inline-flex;
+    min-height: 44px;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: var(--spacing-small);
+    padding: 8px var(--spacing-medium);
+    border: 1px solid rgba(0, 76, 202, .24);
+    border-radius: var(--border-radius-small);
+    color: var(--primary-color);
+    background: rgba(255, 255, 255, .72);
+    font-size: var(--font-size-label);
+    font-weight: 700;
+    transition: transform var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.finance-form-guide-button:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+    background: var(--primary-light);
+}
+
+.finance-form-guide-button .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.finance-form-list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding-left: 22px;
+}
+
+.finance-form-list li {
+    padding: 7px 0;
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.finance-form-list li::marker {
+    color: var(--primary-color);
+}
+
+.finance-form-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-right: var(--spacing-small);
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.finance-form-link:hover {
+    color: var(--primary-hover);
+}
+
+.finance-form-link .material-symbols-outlined {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.finance-form-description::before {
+    content: "— ";
+    color: var(--muted-text-color);
+}
+
 .administration-services {
     padding-top: var(--spacing-small);
     padding-bottom: var(--spacing-large);
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+    margin-bottom: var(--spacing-large);
+}
+
+.section-heading-accent {
+    width: 5px;
+    height: 28px;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    background: var(--primary-color);
+}
+
+.section-heading-title {
+    margin: 0;
+    font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;
+    font-size: var(--font-size-heading);
+}
+
+.finance-page .administration-services {
+    padding-top: 36px;
+    padding-bottom: 50px;
+    border-top: 1px solid var(--border-color);
+}
+
+.finance-page .section-heading-title {
+    font-size: var(--font-size-title);
+    line-height: 1.3;
+}
+
+.finance-page .section-heading-accent {
+    height: 36px;
+}
+
+.company-tax-section {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    border-top: 1px solid var(--border-color);
+}
+
+.company-tax-heading {
+    margin-bottom: var(--spacing-large);
+}
+
+.company-tax-table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, .78);
+}
+
+.company-tax-table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.company-tax-table th,
+.company-tax-table td {
+    padding: 16px var(--spacing-large);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 18px;
+}
+
+.company-tax-table th {
+    color: var(--muted-text-color);
+    background: rgba(219, 225, 255, .42);
+    font-size: var(--font-size-label);
+    font-weight: 700;
+}
+
+.company-tax-table th:last-child,
+.company-tax-table td:last-child {
+    width: 220px;
+    font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.company-tax-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.company-tax-table tbody tr:hover {
+    background: rgba(219, 225, 255, .22);
+}
+
+.finance-page .introduction-content {
+    padding-top: var(--spacing-medium);
+    padding-bottom: 40px;
+}
+
+.finance-page .section-heading {
+    margin-bottom: 32px;
+}
+
+.finance-page .policy-section {
+    padding-top: 36px;
+}
+
+/* ===== 福委會頁面 ===== */
+.welfare-page .introduction-content {
+    padding-top: var(--spacing-medium);
+    padding-bottom: 40px;
+}
+
+.welfare-benefits {
+    padding-top: 36px;
+    padding-bottom: 48px;
+    border-top: 1px solid var(--border-color);
+}
+
+.welfare-page .section-heading-title {
+    font-size: var(--font-size-title);
+    line-height: 1.3;
+}
+
+.welfare-page .section-heading-accent {
+    height: 36px;
+}
+
+.welfare-page .section-heading {
+    margin-bottom: 32px;
+}
+
+.welfare-card {
+    position: relative;
+    min-height: 0;
+}
+
+.welfare-card-number {
+    position: absolute;
+    top: var(--spacing-large);
+    right: var(--spacing-large);
+    color: rgba(25, 28, 30, .18);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.benefit-list {
+    display: grid;
+    gap: 10px;
+    margin: var(--spacing-large) 0 0;
+    padding: var(--spacing-large) 0 0 22px;
+    border-top: 1px solid var(--border-color);
+    color: var(--muted-text-color);
+    line-height: 1.6;
+}
+
+.benefit-list li::marker {
+    color: currentColor;
+}
+
+.benefit-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.benefit-link > span:first-child {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.benefit-link:hover {
+    color: var(--primary-color);
+}
+
+.benefit-link .material-symbols-outlined {
+    flex: 0 0 auto;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.welfare-card-rewards .service-icon,
+.welfare-card-rewards .benefit-list {
+    color: var(--primary-color);
+}
+
+.welfare-card-rewards .service-icon {
+    background: var(--primary-light);
+}
+
+.welfare-card-protection .service-icon,
+.welfare-card-protection .benefit-list {
+    color: var(--secondary-color);
+}
+
+.welfare-card-protection .service-icon {
+    background: var(--secondary-light);
+}
+
+.welfare-card-leave .service-icon,
+.welfare-card-leave .benefit-list {
+    color: var(--tertiary-color);
+}
+
+.welfare-card-leave .service-icon {
+    background: var(--tertiary-light);
+}
+
+.welfare-card-learning .service-icon,
+.welfare-card-learning .benefit-list {
+    color: var(--error-color);
+}
+
+.welfare-card-learning .service-icon {
+    background: var(--error-light);
+}
+
+.welfare-card-activities .service-icon,
+.welfare-card-activities .benefit-list {
+    color: #5542b6;
+}
+
+.welfare-card-activities .service-icon {
+    background: #e5deff;
+}
+
+.welfare-card-care .service-icon,
+.welfare-card-care .benefit-list {
+    color: #356400;
+}
+
+.welfare-card-care .service-icon {
+    background: #d6f6ae;
+}
+
+.welfare-committee {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+.committee-table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, .78);
+}
+
+.committee-table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.committee-table th,
+.committee-table td {
+    padding: 16px var(--spacing-large);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 18px;
+}
+
+.committee-table th {
+    color: var(--muted-text-color);
+    background: rgba(219, 225, 255, .42);
+    font-size: var(--font-size-label);
+    font-weight: 700;
+}
+
+.committee-table th:first-child,
+.committee-table td:first-child {
+    width: 220px;
+    white-space: nowrap;
+}
+
+.committee-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.committee-table tbody tr:hover {
+    background: rgba(219, 225, 255, .22);
+}
+
+.welfare-note {
+    padding-top: var(--spacing-small);
+    padding-bottom: 80px;
+}
+
+.welfare-note-content {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-medium);
+    padding: var(--spacing-large);
+    border-left: 4px solid var(--primary-color);
+    color: var(--muted-text-color);
+    background: rgba(219, 225, 255, .28);
+    line-height: 1.75;
+}
+
+.welfare-note-content > .material-symbols-outlined {
+    flex: 0 0 auto;
+    color: var(--primary-color);
+}
+
+.welfare-note-content p {
+    margin: 0;
 }
 
 .service-grid {
@@ -624,6 +1026,82 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: var(--spacing-large);
+}
+
+.general-affairs-page .service-card-life {
+    grid-column: 1 / -1;
+    min-height: 360px;
+}
+
+.general-affairs-page .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.general-affairs-page .service-card {
+    min-height: 380px;
+}
+
+.service-card-office .service-icon,
+.service-card-office .content-link {
+    color: var(--primary-color);
+}
+
+.service-card-office .service-icon {
+    background: var(--primary-light);
+}
+
+.service-card-environment .service-icon,
+.service-card-environment .content-link {
+    color: var(--secondary-color);
+}
+
+.service-card-environment .service-icon {
+    background: var(--secondary-light);
+}
+
+.service-card-icc .service-icon,
+.service-card-icc .content-link {
+    color: var(--tertiary-color);
+}
+
+.service-card-icc .service-icon {
+    background: var(--tertiary-light);
+}
+
+.service-card-assets .service-icon,
+.service-card-assets .content-link {
+    color: var(--error-color);
+}
+
+.service-card-assets .service-icon {
+    background: var(--error-light);
+}
+
+.service-card-project-finance .service-icon,
+.service-card-project-finance .content-link {
+    color: var(--primary-color);
+}
+
+.service-card-project-finance .service-icon {
+    background: var(--primary-light);
+}
+
+.service-card-purchasing .service-icon,
+.service-card-purchasing .content-link {
+    color: var(--secondary-color);
+}
+
+.service-card-purchasing .service-icon {
+    background: var(--secondary-light);
+}
+
+.service-card-travel-expense .service-icon,
+.service-card-travel-expense .content-link {
+    color: var(--tertiary-color);
+}
+
+.service-card-travel-expense .service-icon {
+    background: var(--tertiary-light);
 }
 
 .policy-section {
@@ -893,6 +1371,83 @@ button {
         font-size: var(--font-size-body);
     }
 
+    .finance-form-description {
+        display: block;
+        margin-top: 4px;
+    }
+
+    .finance-form-guide {
+        margin-top: var(--spacing-large);
+    }
+
+    .finance-form-guide-header {
+        margin-bottom: var(--spacing-medium);
+    }
+
+    .finance-form-list li {
+        padding: 12px 0;
+    }
+
+    .finance-page .introduction-content {
+        padding-bottom: 32px;
+    }
+
+    .finance-page .administration-services {
+        padding-top: 28px;
+        padding-bottom: var(--spacing-medium);
+    }
+
+    .finance-page .section-heading {
+        margin-bottom: var(--spacing-large);
+    }
+
+    .finance-page .policy-section {
+        padding-top: 28px;
+    }
+
+    .company-tax-section {
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
+    .company-tax-table th,
+    .company-tax-table td {
+        padding: 14px var(--spacing-medium);
+    }
+
+    .welfare-page .introduction-content {
+        padding-bottom: 32px;
+    }
+
+    .welfare-benefits,
+    .welfare-committee {
+        padding-top: 28px;
+        padding-bottom: 32px;
+    }
+
+    .welfare-page .section-heading {
+        margin-bottom: var(--spacing-large);
+    }
+
+    .benefit-list {
+        margin-top: var(--spacing-medium);
+        padding-top: var(--spacing-medium);
+    }
+
+    .committee-table th,
+    .committee-table td {
+        padding: 14px var(--spacing-medium);
+    }
+
+    .welfare-note {
+        padding-top: 0;
+        padding-bottom: 120px;
+    }
+
+    .welfare-note-content {
+        padding: var(--spacing-medium);
+    }
+
     .service-grid {
         grid-template-columns: 1fr;
     }
@@ -903,6 +1458,18 @@ button {
 
     .service-card-life .service-links {
         grid-template-columns: 1fr;
+    }
+
+    .general-affairs-page .service-card-life {
+        min-height: 0;
+    }
+
+    .general-affairs-page .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .general-affairs-page .service-card {
+        min-height: 0;
     }
 
     .service-card {
