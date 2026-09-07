@@ -637,7 +637,14 @@ button {
     overflow-x: auto;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    background: rgba(255, 255, 255, .78);
+    background: rgba(255, 255, 255, .88);
+    box-shadow: var(--shadow-small);
+    scrollbar-width: thin;
+}
+
+.company-tax-table-wrapper:focus-visible {
+    outline: 3px solid rgba(0, 76, 202, .3);
+    outline-offset: 3px;
 }
 
 .company-tax-table {
@@ -649,16 +656,19 @@ button {
 
 .company-tax-table th,
 .company-tax-table td {
-    padding: 16px var(--spacing-large);
+    padding: 18px var(--spacing-large);
     border-bottom: 1px solid var(--border-color);
-    font-size: 18px;
+    vertical-align: top;
+    font-size: 17px;
+    line-height: 1.75;
 }
 
 .company-tax-table th {
-    color: var(--muted-text-color);
-    background: rgba(219, 225, 255, .42);
+    color: #fff;
+    background: var(--primary-color);
     font-size: var(--font-size-label);
     font-weight: 700;
+    white-space: nowrap;
 }
 
 .company-tax-table th:last-child,
@@ -673,8 +683,12 @@ button {
     border-bottom: 0;
 }
 
+.company-tax-table tbody tr:nth-child(odd) {
+    background: rgba(219, 225, 255, .2);
+}
+
 .company-tax-table tbody tr:hover {
-    background: rgba(219, 225, 255, .22);
+    background: rgba(219, 225, 255, .38);
 }
 
 .finance-page .introduction-content {
@@ -688,6 +702,158 @@ button {
 
 .finance-page .policy-section {
     padding-top: 36px;
+}
+
+/* ===== 集團 Group 頁面 ===== */
+.group-roster-section {
+    padding-top: 36px;
+    padding-bottom: 80px;
+    border-top: 1px solid var(--border-color);
+}
+
+.group-page .page-description {
+    max-width: 1120px;
+    line-height: 1.9;
+}
+
+.group-page .section-heading-title {
+    font-size: var(--font-size-title);
+    line-height: 1.3;
+}
+
+.group-page .section-heading-accent {
+    height: 36px;
+}
+
+.group-roster-table-wrapper,
+.group-duty-table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, .88);
+    box-shadow: var(--shadow-small);
+    scrollbar-width: thin;
+}
+
+.group-roster-table-wrapper:focus-visible,
+.group-duty-table-wrapper:focus-visible {
+    outline: 3px solid rgba(0, 76, 202, .3);
+    outline-offset: 3px;
+}
+
+.group-duty-table-wrapper {
+    margin-top: 32px;
+}
+
+.group-roster-table,
+.group-duty-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.group-roster-table {
+    min-width: 1040px;
+}
+
+.group-duty-table {
+    min-width: 720px;
+}
+
+.group-roster-table th,
+.group-roster-table td,
+.group-duty-table th,
+.group-duty-table td {
+    padding: 18px var(--spacing-large);
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.group-roster-table thead th,
+.group-duty-table thead th {
+    color: #fff;
+    background: var(--primary-color);
+    font-size: var(--font-size-label);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.group-roster-table tbody th,
+.group-duty-table tbody th {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.group-roster-table thead th:nth-child(1) {
+    width: 18%;
+}
+
+.group-roster-table thead th:nth-child(2) {
+    width: 17%;
+}
+
+.group-roster-table thead th:nth-child(3) {
+    width: 13%;
+}
+
+.group-duty-table thead th:first-child {
+    width: 190px;
+}
+
+.group-roster-table tbody tr:nth-child(odd),
+.group-duty-table tbody tr:nth-child(odd) {
+    background: rgba(219, 225, 255, .2);
+}
+
+.group-roster-table tbody tr:hover,
+.group-duty-table tbody tr:hover {
+    background: rgba(219, 225, 255, .38);
+}
+
+.group-roster-table tbody tr:last-child th,
+.group-roster-table tbody tr:last-child td,
+.group-duty-table tbody tr:last-child th,
+.group-duty-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.roster-role-note {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted-text-color);
+    font-size: 15px;
+}
+
+.roster-role-label {
+    display: inline-block;
+    margin-right: var(--spacing-small);
+    padding: 2px 8px;
+    border-radius: 999px;
+    color: var(--primary-color);
+    background: var(--primary-light);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.empty-cell {
+    color: var(--muted-text-color);
+}
+
+.group-roster-updated {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--spacing-small);
+    margin: var(--spacing-large) 0 0;
+    color: var(--muted-text-color);
+    font-size: var(--font-size-label);
+    font-weight: 600;
+}
+
+.group-roster-updated .material-symbols-outlined {
+    font-size: 20px;
 }
 
 /* ===== 福委會頁面 ===== */
@@ -834,7 +1000,14 @@ button {
     overflow-x: auto;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    background: rgba(255, 255, 255, .78);
+    background: rgba(255, 255, 255, .88);
+    box-shadow: var(--shadow-small);
+    scrollbar-width: thin;
+}
+
+.committee-table-wrapper:focus-visible {
+    outline: 3px solid rgba(0, 76, 202, .3);
+    outline-offset: 3px;
 }
 
 .committee-table {
@@ -846,16 +1019,19 @@ button {
 
 .committee-table th,
 .committee-table td {
-    padding: 16px var(--spacing-large);
+    padding: 18px var(--spacing-large);
     border-bottom: 1px solid var(--border-color);
-    font-size: 18px;
+    vertical-align: top;
+    font-size: 17px;
+    line-height: 1.75;
 }
 
 .committee-table th {
-    color: var(--muted-text-color);
-    background: rgba(219, 225, 255, .42);
+    color: #fff;
+    background: var(--primary-color);
     font-size: var(--font-size-label);
     font-weight: 700;
+    white-space: nowrap;
 }
 
 .committee-table th:first-child,
@@ -868,8 +1044,12 @@ button {
     border-bottom: 0;
 }
 
+.committee-table tbody tr:nth-child(odd) {
+    background: rgba(219, 225, 255, .2);
+}
+
 .committee-table tbody tr:hover {
-    background: rgba(219, 225, 255, .22);
+    background: rgba(219, 225, 255, .38);
 }
 
 .welfare-note {
@@ -1035,10 +1215,12 @@ button {
 
 .general-affairs-page .service-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
 }
 
 .general-affairs-page .service-card {
-    min-height: 380px;
+    height: 424px;
+    min-height: 424px;
 }
 
 .service-card-office .service-icon,
@@ -1066,6 +1248,380 @@ button {
 
 .service-card-icc .service-icon {
     background: var(--tertiary-light);
+}
+
+.service-card-stack-icc {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: var(--spacing-large);
+    min-width: 0;
+}
+
+.service-card-stack-icc .service-card-icc {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.service-card-stack-icc .service-card-assets {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.gym-rules-trigger {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    text-align: left;
+    background: transparent;
+    font-family: inherit;
+}
+
+.gym-rules-trigger-icon {
+    transition: transform 300ms ease;
+}
+
+.gym-rules-trigger[aria-expanded="true"] .gym-rules-trigger-icon {
+    transform: rotate(180deg);
+}
+
+.gym-rules-panel {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    overflow: hidden;
+    max-height: 0;
+    margin-top: calc(-1 * var(--spacing-large));
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: max-height 450ms ease, margin-top 350ms ease, opacity 250ms ease,
+        transform 350ms ease, visibility 0s linear 450ms;
+}
+
+.facility-rental-panel {
+    grid-row: 2;
+}
+
+#gym-rules-panel {
+    grid-row: 2;
+}
+
+.gym-rules-panel-open {
+    max-height: 2200px;
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition: max-height 500ms ease, margin-top 350ms ease, opacity 300ms ease,
+        transform 350ms ease, visibility 0s linear 0s;
+}
+
+.gym-rules-panel-inner {
+    padding: 32px;
+    border: 2px solid rgba(127, 74, 0, 0.97);
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    background: rgb(255, 255, 255);
+    box-shadow: var(--shadow-small);
+}
+
+.gym-rules-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-medium);
+    margin-bottom: var(--spacing-large);
+}
+
+.gym-rules-icon {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: var(--border-radius-small);
+    color: var(--tertiary-color);
+    background: var(--tertiary-light);
+}
+
+.gym-rules-icon .material-symbols-outlined {
+    font-size: 30px;
+}
+
+.gym-rules-eyebrow {
+    margin: 0 0 var(--spacing-xs);
+    color: var(--tertiary-color);
+    font-size: var(--font-size-label);
+    font-weight: 700;
+}
+
+.gym-rules-title {
+    margin: 0;
+    font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;
+    font-size: var(--font-size-heading);
+}
+
+.gym-rules-introduction {
+    margin: 0 0 var(--spacing-large);
+    color: var(--muted-text-color);
+    line-height: 1.75;
+}
+
+.gym-rules-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px var(--spacing-xl);
+    padding-bottom: 50px;
+}
+
+.gym-rules-detail {
+    padding-top: var(--spacing-medium);
+    border-top: 1px solid var(--border-color);
+}
+
+.gym-rules-detail h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+    margin: 0 0 var(--spacing-medium);
+    color: var(--tertiary-color);
+    font-size: 19px;
+}
+
+.gym-rules-detail h3 .material-symbols-outlined {
+    font-size: 23px;
+}
+
+.gym-rules-detail p {
+    margin: 0 0 var(--spacing-small);
+    color: var(--muted-text-color);
+    line-height: 1.75;
+}
+
+.gym-rules-detail p:last-child {
+    margin-bottom: 0;
+}
+
+.gym-rules-detail p strong {
+    color: var(--text-color);
+}
+
+.gym-equipment-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-small);
+    margin: var(--spacing-medium) 0;
+    padding-left: 22px;
+    color: var(--muted-text-color);
+}
+
+.gym-equipment-list li::marker {
+    color: var(--tertiary-color);
+}
+
+.gym-membership-list {
+    display: grid;
+    gap: var(--spacing-small);
+    margin: var(--spacing-medium) 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gym-membership-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-medium);
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius-small);
+    color: var(--muted-text-color);
+    background: rgba(255, 220, 188, .26);
+}
+
+.gym-membership-list strong {
+    color: var(--tertiary-color);
+    white-space: nowrap;
+}
+
+.parking-information-list {
+    display: grid;
+    gap: var(--spacing-small);
+    margin: var(--spacing-medium) 0;
+    padding-left: 22px;
+    color: var(--muted-text-color);
+}
+
+.parking-information-list li::marker {
+    color: var(--tertiary-color);
+}
+
+.parking-rate-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--spacing-small);
+    margin: var(--spacing-medium) 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.parking-rate-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-small);
+    padding: var(--spacing-small);
+    border-radius: var(--border-radius-small);
+    color: var(--muted-text-color);
+    background: rgba(255, 220, 188, .26);
+}
+
+.parking-rate-list strong {
+    color: var(--tertiary-color);
+    white-space: nowrap;
+}
+
+.parking-rate-section {
+    grid-column: 1 / -1;
+}
+
+.facility-rental-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px var(--spacing-xl);
+}
+
+.facility-meeting-section {
+    grid-column: 1 / -1;
+}
+
+.facility-rate-table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-small);
+}
+
+.facility-rate-table {
+    width: 100%;
+    min-width: 540px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.facility-rate-table th,
+.facility-rate-table td {
+    padding: 13px var(--spacing-medium);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.facility-rate-table th {
+    color: var(--tertiary-color);
+    background: rgba(255, 220, 188, .3);
+    font-size: var(--font-size-label);
+    font-weight: 700;
+}
+
+.facility-rate-table td:nth-child(2),
+.facility-rate-table td:nth-child(3) {
+    white-space: nowrap;
+}
+
+.facility-rate-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.facility-fee-list {
+    display: grid;
+    gap: var(--spacing-small);
+    margin: var(--spacing-medium) 0;
+    padding: 0;
+    list-style: none;
+}
+
+.facility-fee-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-medium);
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius-small);
+    color: var(--muted-text-color);
+    background: rgba(255, 220, 188, .26);
+}
+
+.facility-fee-list strong {
+    color: var(--tertiary-color);
+    text-align: right;
+}
+
+.facility-location-button {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    gap: var(--spacing-small);
+    margin-top: var(--spacing-medium);
+    padding: 10px var(--spacing-medium);
+    border: 1px solid var(--tertiary-color);
+    border-radius: var(--border-radius-small);
+    color: #fff;
+    background: var(--tertiary-color);
+    font-weight: 700;
+    transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.facility-location-button:hover {
+    transform: translateY(-2px);
+    background: #5f3800;
+    box-shadow: 0 8px 18px rgba(95, 56, 0, .2);
+}
+
+.facility-location-button-header {
+    flex: 0 0 auto;
+    margin-top: 0;
+    margin-left: auto;
+}
+
+.facility-location-button .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.facility-location-button:focus-visible {
+    outline: 3px solid rgba(0, 76, 202, .35);
+    outline-offset: 3px;
+}
+
+.gym-rules-close {
+    display: inline-flex;
+    min-height: 44px;
+    margin-top: 32px;
+    align-items: center;
+    gap: var(--spacing-small);
+    padding: 8px var(--spacing-medium);
+    border: 1px solid rgba(127, 75, 0, .28);
+    border-radius: var(--border-radius-small);
+    color: var(--tertiary-color);
+    cursor: pointer;
+    background: #fff;
+    font-weight: 700;
+    transition: transform var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.gym-rules-close:hover {
+    transform: translateY(-2px);
+    border-color: var(--tertiary-color);
+    background: var(--tertiary-light);
+}
+
+.gym-rules-close .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.gym-rules-trigger:focus-visible,
+.gym-rules-close:focus-visible {
+    outline: 3px solid rgba(0, 76, 202, .35);
+    outline-offset: 3px;
 }
 
 .service-card-assets .service-icon,
@@ -1107,6 +1663,14 @@ button {
 .policy-section {
     padding-top: var(--spacing-large);
     padding-bottom: 80px;
+}
+
+.general-affairs-page .administration-services {
+    padding-bottom: 0;
+}
+
+.general-affairs-page .policy-section {
+    padding-top: 48px;
 }
 
 .policy-banner {
@@ -1415,6 +1979,27 @@ button {
         padding: 14px var(--spacing-medium);
     }
 
+    .group-roster-section {
+        padding-top: 28px;
+        padding-bottom: 120px;
+    }
+
+    .group-page .section-heading-title {
+        font-size: 26px;
+    }
+
+    .group-roster-table th,
+    .group-roster-table td,
+    .group-duty-table th,
+    .group-duty-table td {
+        padding: 14px var(--spacing-medium);
+        font-size: var(--font-size-body);
+    }
+
+    .group-duty-table-wrapper {
+        margin-top: var(--spacing-large);
+    }
+
     .welfare-page .introduction-content {
         padding-bottom: 32px;
     }
@@ -1470,6 +2055,68 @@ button {
 
     .general-affairs-page .service-card {
         min-height: 0;
+    }
+
+    .service-card-stack-icc {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card-stack-icc .service-card-icc {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .service-card-stack-icc .parking-rules-panel {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .service-card-stack-icc .facility-rental-panel {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .service-card-stack-icc #gym-rules-panel {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .service-card-stack-icc .service-card-assets {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .gym-rules-panel-inner {
+        padding: var(--spacing-large);
+    }
+
+    .gym-rules-header {
+        align-items: flex-start;
+    }
+
+    .facility-location-button-header {
+        width: 100%;
+        justify-content: center;
+        margin-top: var(--spacing-small);
+        margin-left: 0;
+    }
+
+    .gym-rules-details {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-large);
+    }
+
+    .facility-rental-details {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-large);
+    }
+
+    .facility-meeting-section {
+        grid-column: 1;
+    }
+
+    .parking-rate-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .service-card {
