@@ -1250,13 +1250,28 @@ button {
     background: var(--tertiary-light);
 }
 
-.service-card-stack-icc {
+.service-card-stack-icc,
+.service-card-stack-office {
     display: grid;
     grid-column: 1 / -1;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: start;
     gap: var(--spacing-large);
     min-width: 0;
+}
+
+.service-card-stack-office .service-card-office {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.service-card-stack-office .service-card-environment {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.service-card-stack-office .mail-delivery-panel {
+    grid-row: 2;
 }
 
 .service-card-stack-icc .service-card-icc {
@@ -1327,6 +1342,26 @@ button {
     color: var(--text-color);
     background: rgb(255, 255, 255);
     box-shadow: var(--shadow-small);
+}
+
+.mail-delivery-panel .gym-rules-panel-inner {
+    border-color: var(--primary-color);
+}
+
+.mail-delivery-panel .gym-rules-icon {
+    color: var(--primary-color);
+    background: var(--primary-light);
+}
+
+.mail-delivery-panel .mail-application-button {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+}
+
+.mail-delivery-panel .mail-application-button:hover {
+    border-color: #003b9e;
+    background: #003b9e;
+    box-shadow: 0 8px 18px rgba(0, 59, 158, .2);
 }
 
 .gym-rules-header {
@@ -1487,6 +1522,97 @@ button {
     grid-column: 1 / -1;
 }
 
+.mail-schedule-section {
+    margin-bottom: 32px;
+}
+
+.mail-schedule-section > h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+    margin: 0 0 var(--spacing-medium);
+    font-size: 19px;
+}
+
+.mail-schedule-section > h3 .material-symbols-outlined {
+    color: var(--primary-color);
+}
+
+.mail-schedule-table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-small);
+    background: #fff;
+}
+
+.mail-schedule-table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.mail-schedule-table th,
+.mail-schedule-table td {
+    padding: 14px var(--spacing-medium);
+    border-bottom: 1px solid var(--border-color);
+    font-size: var(--font-size-body);
+}
+
+.mail-schedule-table thead th {
+    color: #fff;
+    background: var(--primary-color);
+    font-weight: 700;
+}
+
+.mail-schedule-table tbody th {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.mail-schedule-table tbody tr:nth-child(odd) {
+    background: rgba(219, 225, 255, .2);
+}
+
+.mail-schedule-table tbody tr:last-child th,
+.mail-schedule-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.mail-schedule-note {
+    margin: 12px 0 0;
+    color: var(--muted-text-color);
+    font-size: var(--font-size-label);
+}
+
+.mail-delivery-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mail-delivery-panel .gym-rules-detail strong {
+    color: var(--text-color);
+}
+
+.mail-rule-list li::marker {
+    color: var(--primary-color);
+}
+
+.mail-post-section {
+    grid-column: 1 / -1;
+}
+
+.mail-rule-list {
+    display: grid;
+    gap: 10px;
+    margin: var(--spacing-medium) 0 0;
+    padding-left: 22px;
+    color: var(--muted-text-color);
+}
+
+.mail-rule-list li {
+    line-height: 1.75;
+}
+
 .facility-rental-details {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1612,6 +1738,21 @@ button {
     transform: translateY(-2px);
     border-color: var(--tertiary-color);
     background: var(--tertiary-light);
+}
+
+.mail-delivery-panel .gym-rules-eyebrow,
+.mail-delivery-panel .gym-rules-detail h3 {
+    color: var(--primary-color);
+}
+
+.mail-delivery-panel .gym-rules-close {
+    border-color: rgba(0, 76, 202, .3);
+    color: var(--primary-color);
+}
+
+.mail-delivery-panel .gym-rules-close:hover {
+    border-color: var(--primary-color);
+    background: var(--primary-light);
 }
 
 .gym-rules-close .material-symbols-outlined {
@@ -2057,8 +2198,24 @@ button {
         min-height: 0;
     }
 
-    .service-card-stack-icc {
+    .service-card-stack-icc,
+    .service-card-stack-office {
         grid-template-columns: 1fr;
+    }
+
+    .service-card-stack-office .service-card-office {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .service-card-stack-office .service-card-environment {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .service-card-stack-office .mail-delivery-panel {
+        grid-column: 1;
+        grid-row: 2;
     }
 
     .service-card-stack-icc .service-card-icc {
@@ -2104,6 +2261,14 @@ button {
     .gym-rules-details {
         grid-template-columns: 1fr;
         gap: var(--spacing-large);
+    }
+
+    .mail-delivery-details {
+        grid-template-columns: 1fr;
+    }
+
+    .mail-post-section {
+        grid-column: 1;
     }
 
     .facility-rental-details {

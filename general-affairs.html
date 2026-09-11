@@ -10,7 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block">
-    <link rel="stylesheet" href="styles.css?v=20260907-1">
+    <link rel="stylesheet" href="styles.css?v=20260911-5">
 </head>
 
 <body class="site-page general-affairs-page">
@@ -56,34 +56,120 @@
 
         <section class="administration-services page-container" aria-label="總務功能分類">
             <div class="service-grid">
-                <article class="service-card service-card-office">
-                    <span class="service-icon"><span class="material-symbols-outlined">business_center</span></span>
-                    <h2 class="service-title">日常辦公服務</h2>
-                    <p class="service-description">提供日常辦公與行政支援服務</p>
-                    <div class="service-links"><a class="content-link"
-                            href="https://drive.google.com/file/d/1PzvwvnR9F4urc5Mxw5VbflB4nyg_OEFv/view?usp=drive_link"><span>午餐訂購說明</span><span
-                                class="material-symbols-outlined">arrow_forward</span></a><a class="content-link"
-                            href="https://gisfcutw-my.sharepoint.com/:p:/g/personal/brian_gis_tw/IQDWZlArTvANRZYOB-yDMp7RAf3DsGWxfZ_aopMRkqpc9rM?e=MKp49A"><span>郵件寄送申請說明</span><span
-                                class="material-symbols-outlined">arrow_forward</span></a><a class="content-link"
-                            href="https://drive.google.com/file/d/1yIWFy4Wklr0d9kSr2_A_Ud8ftlUB-L3p/view?usp=sharing"><span>雲端話機
-                                APP 使用說明</span><span class="material-symbols-outlined">arrow_forward</span></a><a
-                            class="content-link"
-                            href="https://drive.google.com/file/d/14L-YUef5QuXnMtSZYcQGe056Z4LKVprS/view?usp=sharing"><span>事務機列印說明</span><span
-                                class="material-symbols-outlined">arrow_forward</span></a></div>
-                </article>
-                <article class="service-card service-card-environment">
-                    <span class="service-icon"><span class="material-symbols-outlined">location_city</span></span>
-                    <h2 class="service-title">辦公環境資訊</h2>
-                    <p class="service-description">提供辦公空間與周邊環境相關資訊</p>
-                    <div class="service-links"><a class="content-link"
-                            href="https://gisfcutw.sharepoint.com/sites/ICC/SitePages/%E6%96%B0%E8%BE%A6%E5%85%AC%E5%AE%A4%E7%9A%84%E4%BD%8D%E7%BD%AE.aspx"><span>總部周邊環境</span><span
-                                class="material-symbols-outlined">arrow_forward</span></a><a class="content-link"
-                            href="https://gisfcutw.sharepoint.com/sites/ICC/SitePages/%E8%BE%A6%E5%85%AC%E5%8D%80%E5%9F%9F%E8%A8%AD%E6%96%BD%E4%BB%8B%E7%B4%B9.aspx"><span>辦公區域介紹</span><span
-                                class="material-symbols-outlined">arrow_forward</span></a><a class="content-link"
-                            href="https://www.google.com/maps/d/embed?mid=1ugWLuwNs6uSGGV4O8e8WFwLQoBgrbXk&ehbc=2E312F"
-                            target="_blank" rel="noopener noreferrer"><span>周邊停車資訊</span><span
-                                class="material-symbols-outlined">arrow_forward</span></a></div>
-                </article>
+                <div class="service-card-stack service-card-stack-office">
+                    <article class="service-card service-card-office">
+                        <span class="service-icon"><span class="material-symbols-outlined">business_center</span></span>
+                        <h2 class="service-title">日常辦公服務</h2>
+                        <p class="service-description">提供日常辦公與行政支援服務</p>
+                        <div class="service-links"><a class="content-link"
+                                href="https://drive.google.com/file/d/1PzvwvnR9F4urc5Mxw5VbflB4nyg_OEFv/view?usp=drive_link"><span>午餐訂購說明</span><span
+                                    class="material-symbols-outlined">arrow_forward</span></a><button
+                                class="content-link facility-detail-trigger gym-rules-trigger" type="button"
+                                aria-expanded="false" aria-controls="mail-delivery-panel"><span>郵件寄送申請說明</span><span
+                                    class="material-symbols-outlined gym-rules-trigger-icon">expand_more</span></button><a
+                                class="content-link"
+                                href="https://drive.google.com/file/d/1yIWFy4Wklr0d9kSr2_A_Ud8ftlUB-L3p/view?usp=sharing"><span>雲端話機
+                                    APP 使用說明</span><span class="material-symbols-outlined">arrow_forward</span></a><a
+                                class="content-link"
+                                href="https://drive.google.com/file/d/14L-YUef5QuXnMtSZYcQGe056Z4LKVprS/view?usp=sharing"><span>事務機列印說明</span><span
+                                    class="material-symbols-outlined">arrow_forward</span></a></div>
+                    </article>
+                    <article class="service-card service-card-environment">
+                        <span class="service-icon"><span class="material-symbols-outlined">location_city</span></span>
+                        <h2 class="service-title">辦公環境資訊</h2>
+                        <p class="service-description">提供辦公空間與周邊環境相關資訊</p>
+                        <div class="service-links"><a class="content-link"
+                                href="https://gisfcutw.sharepoint.com/sites/ICC/SitePages/%E6%96%B0%E8%BE%A6%E5%85%AC%E5%AE%A4%E7%9A%84%E4%BD%8D%E7%BD%AE.aspx"><span>總部周邊環境</span><span
+                                    class="material-symbols-outlined">arrow_forward</span></a><a class="content-link"
+                                href="https://gisfcutw.sharepoint.com/sites/ICC/SitePages/%E8%BE%A6%E5%85%AC%E5%8D%80%E5%9F%9F%E8%A8%AD%E6%96%BD%E4%BB%8B%E7%B4%B9.aspx"><span>辦公區域介紹</span><span
+                                    class="material-symbols-outlined">arrow_forward</span></a><a class="content-link"
+                                href="https://www.google.com/maps/d/embed?mid=1ugWLuwNs6uSGGV4O8e8WFwLQoBgrbXk&ehbc=2E312F"
+                                target="_blank" rel="noopener noreferrer"><span>周邊停車資訊</span><span
+                                    class="material-symbols-outlined">arrow_forward</span></a></div>
+                    </article>
+
+                    <section class="gym-rules-panel mail-delivery-panel" id="mail-delivery-panel"
+                        aria-labelledby="mail-delivery-title" aria-hidden="true" inert>
+                        <div class="gym-rules-panel-inner">
+                            <header class="gym-rules-header">
+                                <span class="gym-rules-icon"><span
+                                        class="material-symbols-outlined">local_shipping</span></span>
+                                <div>
+                                    <p class="gym-rules-eyebrow">日常辦公服務</p>
+                                    <h2 id="mail-delivery-title" class="gym-rules-title">郵件寄送申請說明</h2>
+                                </div>
+                                <a class="facility-location-button facility-location-button-header mail-application-button"
+                                    href="http://eip/Eform/Ship/ShipApply.aspx" target="_blank"
+                                    rel="noopener noreferrer"><span>EIP 郵寄申請單</span><span
+                                        class="material-symbols-outlined">open_in_new</span></a>
+                            </header>
+                            <p class="gym-rules-introduction">同仁如有寄送需求，請依所在辦公地點及寄送方式，在每日收件截止時間前完成交件。</p>
+
+                            <div class="mail-schedule-section">
+                                <h3><span class="material-symbols-outlined">schedule</span>各地點每日收件截止時間</h3>
+                                <div class="mail-schedule-table-wrapper">
+                                    <table class="mail-schedule-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">寄送方式</th>
+                                                <th scope="col">登陽 ICC</th>
+                                                <th scope="col">逢甲空資處</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Lalamove</th>
+                                                <td>11:00</td>
+                                                <td>12:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">宅急便</th>
+                                                <td>14:00</td>
+                                                <td>13:30</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">郵局</th>
+                                                <td>14:00</td>
+                                                <td>10:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="mail-schedule-note">除收件截止時間不同外，兩個辦公地點的收件規則相同。</p>
+                            </div>
+
+                            <div class="gym-rules-details mail-delivery-details">
+                                <section class="gym-rules-detail">
+                                    <h3><span class="material-symbols-outlined">two_wheeler</span>Lalamove</h3>
+                                    <p>限 <strong>ICC與逢甲之間的公務寄送 </strong>使用：</p>
+                                    <p>登陽 ICC 由總管理處統一寄送，請於截止時間前將物件送至 <strong>22 樓櫃台</strong>。</p>
+                                </section>
+
+                                <section class="gym-rules-detail">
+                                    <h3><span class="material-symbols-outlined">package_2</span>宅急便</h3>
+                                    <p>宅急便由各處自行收件，請依包裹用途辦理：</p>
+                                    <ul class="mail-rule-list">
+                                        <li><strong>公務包裹：</strong>向各處總務同仁領取並自行填寫宅急便託運單；宅急便收貨時以現金支付，並記得填寫公司統一編號。</li>
+                                        <li><strong>私人包裹：</strong>先繳交宅急便運送費用，宅急便來收貨時由各處總務同仁代為支付。</li>
+                                    </ul>
+                                </section>
+
+                                <section class="gym-rules-detail mail-post-section">
+                                    <h3><span class="material-symbols-outlined">forward_to_inbox</span>郵局</h3>
+                                    <p>登陽 ICC 由總管理處統一寄送，請於截止時間前將信件或包裹送至 <strong>22 樓櫃台</strong>。</p>
+                                    <ul class="mail-rule-list">
+                                        <li><strong>公務信件／包裹：</strong>寄件前請至 EIP
+                                            填寫「郵寄申請單」。交件時，請在信件上註明寄送種類，例如平信、掛號、限時或雙掛號，並留下自己的分機號碼。</li>
+                                        <li><strong>錯過櫃台寄送時間：</strong>如需自行辦理郵寄，請於寄件後補填郵寄申請單，並提供相關憑證。</li>
+                                        <li><strong>私人信件／包裹：</strong>先行繳交郵寄費 50 元，實際郵寄費用多退少補。</li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <button class="gym-rules-close" type="button"><span
+                                    class="material-symbols-outlined">expand_less</span><span>收起內容</span></button>
+                        </div>
+                    </section>
+                </div>
                 <div class="service-card-stack service-card-stack-icc">
                     <article class="service-card service-card-icc">
                         <span class="service-icon"><span class="material-symbols-outlined">apartment</span></span>
@@ -91,7 +177,7 @@
                         <p class="service-description">提供 ICC 商辦空間與公共設施使用資訊</p>
                         <div class="service-links"><button
                                 class="content-link facility-detail-trigger gym-rules-trigger" type="button"
-                                aria-expanded="false" aria-controls="parking-rules-panel"><span>訪客／同仁地下停車辦法</span><span
+                                aria-expanded="false" aria-controls="parking-rules-panel"><span>訪客地下停車辦法</span><span
                                     class="material-symbols-outlined gym-rules-trigger-icon">expand_more</span></button><button
                                 class="content-link facility-detail-trigger gym-rules-trigger" type="button"
                                 aria-expanded="false" aria-controls="facility-rental-panel"><span>公共設施租借辦法</span><span
@@ -113,12 +199,12 @@
                                         class="material-symbols-outlined">local_parking</span></span>
                                 <div>
                                     <p class="gym-rules-eyebrow">ICC 停車服務</p>
-                                    <h2 id="parking-rules-title" class="gym-rules-title">訪客／同仁地下停車辦法</h2>
+                                    <h2 id="parking-rules-title" class="gym-rules-title">訪客地下停車辦法</h2>
                                 </div>
                             </header>
-                            <p class="gym-rules-introduction">如有訪客停車需求，請提前完成車位確認與車號登記，以利訪客順利進入地下停車場。</p>
+                            <!--                             <p class="gym-rules-introduction">如有訪客停車需求，請提前完成車位確認與車號登記，以利訪客順利進入地下停車場。</p> -->
                             <div class="gym-rules-details parking-rules-details">
-                                <section class="gym-rules-detail">
+                                <!--      <section class="gym-rules-detail">
                                     <h3><span class="material-symbols-outlined">edit_calendar</span>事前登記</h3>
                                     <p>請先通知<strong>總管理處總務或集團櫃台</strong>，並提供以下資料：</p>
                                     <ul class="parking-information-list">
@@ -127,12 +213,12 @@
                                         <li>訪客車牌號碼</li>
                                     </ul>
                                     <p>由承辦窗口向大樓一樓櫃台登記車號後，即完成停車登記程序。</p>
-                                </section>
-                                <section class="gym-rules-detail">
+                                </section> -->
+                                <section class="gym-rules-detail  parking-rate-section">
                                     <h3><span class="material-symbols-outlined">badge</span>訪客入場與離場</h3>
-                                    <p>大樓另設有 <strong>3 格收費訪客車位</strong>。使用訪客車位時，訪客須先至一樓櫃台填寫資料並以證件換取車證，取得車證後才能進入地下停車場。
+                                    <p>大樓設有 <strong>3
+                                            格收費訪客車位</strong>。使用訪客車位時，訪客須先至一樓櫃台填寫資料並以證件換取車證，取得車證後才能進入地下停車場。<br>離場時請憑車證取回證件，並依實際停放時間繳交費用。
                                     </p>
-                                    <p>離場時請憑車證取回證件，並依實際停放時間繳交費用。</p>
                                 </section>
                                 <section class="gym-rules-detail parking-rate-section">
                                     <h3><span class="material-symbols-outlined">payments</span>訪客臨停費率</h3>
@@ -264,7 +350,7 @@
                                 </section>
                                 <section class="gym-rules-detail">
                                     <h3><span class="material-symbols-outlined">groups</span>使用名額</h3>
-                                    <p>ICC 每日提供 <strong>18 位</strong>集團同仁免費使用名額。</p>
+                                    <p>ICC 每日提供 <strong>14 位</strong>集團同仁免費使用名額。</p>
                                     <p>受空間限制，健身房內同一時間最多容納 <strong>12 人</strong>；人數額滿時，請稍候再入場。</p>
                                 </section>
                                 <section class="gym-rules-detail">
@@ -295,10 +381,12 @@
                         <span class="service-icon"><span class="material-symbols-outlined">inventory</span></span>
                         <h2 class="service-title">設備與資產管理</h2>
                         <p class="service-description">提供設備借用與公司資產管理資訊</p>
-                        <div class="service-links"><a class="content-link" href="https://eip.gis.tw/OfficialAuto/Device/Query" target="_blank"
+                        <div class="service-links"><a class="content-link"
+                                href="https://eip.gis.tw/OfficialAuto/Device/Query" target="_blank"
                                 rel="noopener noreferrer"><span>設備借用登記</span><span
                                     class="material-symbols-outlined">arrow_forward</span></a><a class="content-link"
-                                href="https://eip.gis.tw/Asset/Term/Query" target="_blank" rel="noopener noreferrer"><span>財產盤點與查詢</span><span
+                                href="https://eip.gis.tw/Asset/Term/Query" target="_blank"
+                                rel="noopener noreferrer"><span>財產盤點與查詢</span><span
                                     class="material-symbols-outlined">arrow_forward</span></a></div>
                     </article>
                 </div>
@@ -314,9 +402,8 @@
                     <p>所有總務制度、辦法及相關文件的統一入口</p>
                 </div>
                 <a class="policy-button"
-                    href="https://drive.google.com/drive/u/0/folders/1L97_HzK5HGI51T2uU7EH4PkGKRSNHFda"
-                    target="_blank" rel="noopener noreferrer">前往總務規章文件庫<span
-                        class="material-symbols-outlined">open_in_new</span></a>
+                    href="https://drive.google.com/drive/u/0/folders/1L97_HzK5HGI51T2uU7EH4PkGKRSNHFda" target="_blank"
+                    rel="noopener noreferrer">前往總務規章文件庫<span class="material-symbols-outlined">open_in_new</span></a>
             </div>
         </section>
     </main>
